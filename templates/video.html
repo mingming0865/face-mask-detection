@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Mask Detection On Video</title>
+</head>
+<body>
+    <center>
+        <h1>FACE MASK DETECTION ON VIDEO</h1>
+        <form method="post" action="/video/video_feed" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*">
+            <input type="submit" value="Upload">
+        </form>
+    </center>
+    <script>
+        const videoInput = document.querySelector('input[type="file"]');
+        const videoDisplay = document.getElementById('video-display');
+
+        videoInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const url = URL.createObjectURL(file);
+            videoDisplay.src = url;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Mask Detection On Webcam</title>
+</head>
+<body>
+    <center>
+        <!-- Tiêu đề trang -->
+        <h1>FACE MASK DETECTION ON WEBCAM</h1>
+        <form method="post" action="{{ url_for('webcam_blueprint.video_feed') }}" enctype="multipart/form-data">
+            <!-- Hiển thị hình ảnh từ webcam -->
+            <img src="{{ url_for('webcam_blueprint.video_feed') }}" width="700" height="500">
+        </form>
+    </center>
+</body>
+</html>
